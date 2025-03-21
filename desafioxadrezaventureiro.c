@@ -6,6 +6,7 @@ int main(){
     char rainha;
     int cima = 0, baixo = 0, esquerda = 0, direita = 0;
     int movimentocompleto = 1;
+    int movimentocavalo = 1, cavalo = 0;
 
     printf("***SEJA MUITO BEM VINDO AO SIMULADOR DE XADREZ***\n");
     printf("Iniciando jogo:\n\n");
@@ -35,17 +36,24 @@ int main(){
 
     } while (esquerda <= 4);
 
+    printf("\n\nMovimento CAVALO\n\n");
 
-    while (movimentocompleto--)
-    { printf("\n\nMovimento Cavalo\n");
-        for (int i = 0; i < 2; i++) {
-            printf("Baixo\n"); //Imprime "Baixo" duas vezes.
+    while(movimentocavalo--) /* A variável movimento cavalo tem valor 1, entao decrementamos em 1
+                                para que a mesma inicie a função em loop alinhado adiante */
+    {
+        for (cavalo = 0; cavalo < 2; cavalo++)
+        {
+            printf("Baixo \n");
         }
-
-    printf("Direita\n"); // Imprime "Direita" uma vez
+        printf("Esquerda \n");
     }
+    
+    printf("\n\n"); //Adicionando espaço ao fim do programa
+
+
+    
 
     return 0;
     
-} // este codigo está errado!!!!!!!!!!!!
+} 
     
